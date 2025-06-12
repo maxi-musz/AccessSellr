@@ -1,18 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AccessSellr Frontend
+
+This project uses Next.js (App Router), TailwindCSS, Shadcn UI, and TypeScript.
+
+## Folder Structure
+
+- `src/app/` - App Router entry point and routes
+- `src/components/` - Shared UI components
+- `src/constants/` - Static enums and config
+- `src/context/` - React context providers
+- `src/hooks/` - Custom hooks
+- `src/lib/` - Utilities and helpers
+- `src/types/` - TypeScript types and interfaces
+- `public/` - Static assets
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Install dependencies:
+   ```sh
+   npm install
+   ```
+2. Run the development server:
+   ```sh
+   npm run dev
+   ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -20,7 +30,15 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Tech Stack
+- Next.js
+- TailwindCSS
+- Shadcn UI
+- TypeScript
+
+---
+
+See `DOCS/forntend-docs/FE-development-plan.md` for the full roadmap.
 
 To learn more about Next.js, take a look at the following resources:
 
