@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
+import Image from "next/image";
 
 const newBooks = Array.from({ length: 6 }).map((_, i) => ({
   id: i + 101,
@@ -65,11 +66,14 @@ export default function NewArrivals() {
             {newBooks.map((book) => (
               <Card key={book.id} className="group relative flex-none w-[250px] overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 snap-start">
                 <div className="aspect-[3/4] w-full bg-gray-100 relative overflow-hidden">
-                  <img 
-                    src={book.image} 
-                    alt={book.title} 
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" 
-                  />
+                  <div className="relative w-full h-full">
+                    <Image 
+                      src={book.image} 
+                      alt={book.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute top-3 left-3 flex items-center gap-1 px-2 py-1 bg-white/90 rounded-full text-xs font-medium text-indigo-600">
                     <Clock className="w-3 h-3" />

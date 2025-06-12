@@ -1,6 +1,9 @@
+'use client';
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const categories = [
   { 
@@ -47,11 +50,14 @@ export default function Categories() {
         {categories.map((cat) => (
           <Card key={cat.name} className="group relative overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="aspect-square w-full bg-gray-100 relative overflow-hidden">
-              <img 
-                src={cat.image} 
-                alt={cat.name} 
-                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" 
-              />
+              <div className="relative w-full h-full">
+                <Image 
+                  src={cat.image} 
+                  alt={cat.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">

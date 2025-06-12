@@ -1,3 +1,5 @@
+'use client';
+
 import { BookOpen, Share2, DollarSign, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -28,7 +30,7 @@ export default function HowItWorks() {
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Start earning rewards in three simple steps. It's easy, fast, and rewarding!
+          Start earning rewards in three simple steps. It&apos;s easy, fast, and rewarding!
         </p>
       </div>
 

@@ -1,5 +1,8 @@
+'use client';
+
 import { Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -47,11 +50,14 @@ export default function Testimonials() {
               </div>
               
               <div className="flex items-center gap-4 mb-6">
-                <img 
-                  src={t.avatar} 
-                  alt={t.name} 
-                  className="w-16 h-16 rounded-full object-cover border-2 border-indigo-100" 
-                />
+                <div className="relative w-16 h-16 rounded-full overflow-hidden">
+                  <Image 
+                    src={t.avatar} 
+                    alt={t.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div>
                   <h3 className="font-semibold text-lg">{t.name}</h3>
                   <p className="text-sm text-gray-500">{t.role}</p>
@@ -68,7 +74,7 @@ export default function Testimonials() {
                 )}
               </div>
 
-              <p className="text-gray-600 mb-6">"{t.text}"</p>
+              <p className="text-gray-600 mb-6">&quot;{t.text}&quot;</p>
 
               <div className="flex items-center text-indigo-600 text-sm font-medium">
                 Read full review
