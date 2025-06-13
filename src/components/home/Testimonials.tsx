@@ -33,24 +33,24 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div>
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Readers Say</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+    <div className="py-8 sm:py-16 px-4 sm:px-0">
+      <div className="text-center mb-8 sm:mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">What Our Readers Say</h2>
+        <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
           Join thousands of satisfied readers who have found their next favorite book and earned rewards
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 mb-12">
+      <div className="flex overflow-x-auto pb-6 gap-3 px-4 sm:px-0 sm:grid sm:grid-cols-3 sm:gap-6 sm:mb-12">
         {testimonials.map((t, i) => (
-          <div key={i} className="relative">
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="absolute -top-4 left-8 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center">
-                <Quote className="w-4 h-4 text-white" />
+          <div key={i} className="relative min-w-[240px] sm:min-w-0">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="absolute -top-3 left-4 sm:-top-4 sm:left-6 w-6 h-6 sm:w-8 sm:h-8 bg-indigo-600 rounded-full flex items-center justify-center">
+                <Quote className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
               </div>
               
-              <div className="flex items-center gap-4 mb-6">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden">
+              <div className="flex items-center gap-2 sm:gap-4 mb-3 sm:mb-4">
+                <div className="relative w-10 h-10 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-indigo-100">
                   <Image 
                     src={t.avatar} 
                     alt={t.name}
@@ -59,26 +59,26 @@ export default function Testimonials() {
                   />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">{t.name}</h3>
-                  <p className="text-sm text-gray-500">{t.role}</p>
-                  <p className="text-xs text-gray-400">{t.location}</p>
+                  <h3 className="font-semibold text-sm sm:text-base">{t.name}</h3>
+                  <p className="text-[10px] sm:text-xs text-gray-500">{t.role}</p>
+                  <p className="text-[8px] sm:text-[10px] text-gray-400">{t.location}</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-1 mb-4">
+              <div className="flex items-center gap-0.5 mb-2 sm:mb-3">
                 {[...Array(Math.floor(t.rating))].map((_, j) => (
-                  <Star key={j} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  <Star key={j} className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
                 ))}
                 {t.rating % 1 !== 0 && (
-                  <Star className="w-5 h-5 fill-yellow-400 text-yellow-400 opacity-50" />
+                  <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400 opacity-50" />
                 )}
               </div>
 
-              <p className="text-gray-600 mb-6">&quot;{t.text}&quot;</p>
+              <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 line-clamp-3 sm:line-clamp-none">&quot;{t.text}&quot;</p>
 
-              <div className="flex items-center text-indigo-600 text-sm font-medium">
+              <div className="flex items-center text-indigo-600 text-[10px] sm:text-xs font-medium">
                 Read full review
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>
@@ -87,8 +87,8 @@ export default function Testimonials() {
         ))}
       </div>
 
-      <div className="text-center">
-        <Button variant="outline" className="border-indigo-600 text-indigo-600 hover:bg-indigo-50 rounded-full px-8">
+      <div className="text-center mt-4">
+        <Button variant="outline" className="border-indigo-600 text-indigo-600 hover:bg-indigo-50 rounded-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-base">
           View All Reviews
         </Button>
       </div>

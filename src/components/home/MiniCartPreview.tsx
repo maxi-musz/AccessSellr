@@ -12,9 +12,13 @@ export default function MiniCartPreview() {
   return (
     <div className="relative group">
       <button className="flex items-center gap-2 px-4 py-2 rounded hover:bg-indigo-50">
-        <ShoppingCart className="w-6 h-6 text-indigo-600" />
-        <span className="font-medium">Cart</span>
-        <span className="ml-1 bg-indigo-600 text-white rounded-full px-2 text-xs">{cartItems.length}</span>
+        <div className="relative">
+          <ShoppingCart className="w-6 h-6 text-indigo-600" />
+          <span className="absolute -top-2 -right-2 bg-indigo-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs">
+            {cartItems.length}
+          </span>
+        </div>
+        {/* <span className="font-medium">Cart</span> */}
       </button>
       <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-lg p-4 z-50 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition">
         <div className="font-semibold mb-2">Cart Preview</div>
