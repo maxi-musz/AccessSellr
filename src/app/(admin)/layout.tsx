@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -14,7 +14,8 @@ import {
   MessageSquare,
   LogOut,
   Menu,
-  X
+  X,
+  Loader2
 } from "lucide-react";
 
 const sidebarItems = [
@@ -131,7 +132,20 @@ export default function AdminLayout({
           isSidebarOpen ? "lg:ml-64" : ""
         }`}
       >
-        <div className="p-8">{children}</div>
+        <div className="p-8">
+          <Suspense 
+            fallback={
+              <div className="flex items-center justify-center min-h-[200px]">
+                <div className="flex flex-col items-center gap-4">
+                  <Loader2 className="h-8 w-8 animate-spin text-indigo-600" />
+                  <p className="text-gray-600">Loading...</p>
+                </div>
+              </div>
+            }
+          >
+            {children}
+          </Suspense>
+        </div>
       </main>
     </div>
   );
