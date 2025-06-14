@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { Trash2, ShoppingCart } from "lucide-react";
+import { Trash2 } from "lucide-react";
 
 // Mock wishlist data - replace with actual data from your backend
 const wishlistItems = [

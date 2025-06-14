@@ -3,18 +3,13 @@
 import { useState } from "react";
 import {
   Search,
-  ChevronDown,
   X,
   User,
-  Mail,
-  Phone,
   Calendar,
   Eye,
   MoreVertical,
-  Filter,
   ArrowUpDown,
   DollarSign,
-  MapPin,
   SlidersHorizontal,
   Download,
   Plus,

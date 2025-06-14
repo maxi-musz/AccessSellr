@@ -1,26 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { 
   Filter, 
-  X,
   Search,
-  ChevronDown, 
   Star, 
   Heart, 
   ShoppingCart,
   Truck,
-  Shield,
   Clock,
-  ArrowUpDown,
   Book,
   BookOpen,
-  Download,
   Grid3X3,
   List,
   Eye,
-  Plus,
   Check,
   Zap,
   Award,
@@ -28,7 +23,6 @@ import {
   Users,
   Calendar
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import PageHeader from "@/components/ui/PageHeader";
 
 // Enhanced mock data for books
@@ -473,32 +467,26 @@ export default function ProfessionalProductsPage() {
                     >
                       <Link href={`/products/${product.id}-${product.title.toLowerCase().replace(/\s+/g, '-')}`}>
                         <div className="relative overflow-hidden">
-                          <img
-                            src={product.image}
-                            alt={product.title}
-                            className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
-                          
-                          {/* Badges */}
-                          <div className="absolute top-3 left-3 flex flex-col gap-2">
+                          <div className="relative aspect-[2/3] overflow-hidden rounded-lg bg-gray-100">
+                            <Image
+                              src={product.image}
+                              alt={product.title}
+                              width={400}
+                              height={600}
+                              className="h-full w-full object-cover object-center"
+                            />
                             {product.isNew && (
-                              <span className="bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-medium">
+                              <span className="absolute top-2 left-2 rounded-full bg-indigo-600 px-2 py-1 text-xs font-medium text-white">
                                 New
                               </span>
                             )}
                             {product.isBestseller && (
-                              <span className="bg-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium flex items-center gap-1">
-                                <Award className="h-3 w-3" />
+                              <span className="absolute top-2 right-2 rounded-full bg-yellow-400 px-2 py-1 text-xs font-medium text-yellow-900">
                                 Bestseller
                               </span>
                             )}
-                            {product.discount && (
-                              <span className="bg-red-500 text-white text-xs px-3 py-1 rounded-full font-medium">
-                                {product.discount}% OFF
-                              </span>
-                            )}
                           </div>
-
+                          
                           {/* Actions */}
                           <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                             <button 
@@ -615,16 +603,25 @@ export default function ProfessionalProductsPage() {
                     >
                       <div className="flex gap-6 p-6">
                         <div className="relative w-32 h-48 flex-shrink-0">
-                          <img
-                            src={product.image}
-                            alt={product.title}
-                            className="w-full h-full object-cover rounded-xl"
-                          />
-                          {product.discount && (
-                            <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
-                              {product.discount}% OFF
-                            </span>
-                          )}
+                          <div className="relative aspect-[2/3] overflow-hidden rounded-lg bg-gray-100">
+                            <Image
+                              src={product.image}
+                              alt={product.title}
+                              width={400}
+                              height={600}
+                              className="h-full w-full object-cover object-center"
+                            />
+                            {product.isNew && (
+                              <span className="absolute top-2 left-2 rounded-full bg-indigo-600 px-2 py-1 text-xs font-medium text-white">
+                                New
+                              </span>
+                            )}
+                            {product.isBestseller && (
+                              <span className="absolute top-2 right-2 rounded-full bg-yellow-400 px-2 py-1 text-xs font-medium text-yellow-900">
+                                Bestseller
+                              </span>
+                            )}
+                          </div>
                         </div>
                         
                         <div className="flex-1 min-w-0">

@@ -17,7 +17,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { BookOpen, Lock, Mail } from "lucide-react";
 
 const formSchema = z.object({
@@ -154,7 +154,7 @@ export default function LoginPage() {
                       </Link>
                     </div>
                     <div className="text-gray-600">
-                      Don't have an account?{" "}
+                      Don&apos;t have an account?{" "}
                       <Link
                         href="/register"
                         className="text-indigo-600 hover:text-indigo-700 font-medium hover:underline"

@@ -17,7 +17,7 @@ export default function AboutReferralsPage() {
             About Our Referral Program
           </h1>
           <p className="text-xl text-gray-600">
-            Learn how our referral program works and how you can benefit from it.
+            Join our referral program and earn rewards for every friend you refer. It&apos;s simple, rewarding, and helps others discover great books.
           </p>
         </div>
 

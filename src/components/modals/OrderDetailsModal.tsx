@@ -1,4 +1,4 @@
-import { X, Package, User, MapPin, CreditCard, Truck, Calendar, Phone, Mail } from 'lucide-react';
+import { X, Package, User, MapPin, CreditCard, Truck, Phone } from 'lucide-react';
 
 interface OrderItem {
   id: string;

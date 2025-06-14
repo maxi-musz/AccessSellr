@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { 
   ArrowLeft,
@@ -113,13 +114,15 @@ const orders = [
   }
 ];
 
-const statusColors = {
+type OrderStatus = 'Delivered' | 'Processing' | 'Shipped';
+
+const statusColors: Record<OrderStatus, string> = {
   Delivered: "bg-green-100 text-green-800",
   Processing: "bg-yellow-100 text-yellow-800",
   Shipped: "bg-blue-100 text-blue-800"
 };
 
-const statusIcons = {
+const statusIcons: Record<OrderStatus, typeof CheckCircle2> = {
   Delivered: CheckCircle2,
   Processing: Clock,
   Shipped: Truck
@@ -137,7 +140,7 @@ export default function OrderDetailsPage() {
         <div className="text-center">
           <AlertCircle className="h-12 w-12 text-red-500 mx-auto mb-4" />
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Order Not Found</h1>
-          <p className="text-gray-500 mb-4">The order you're looking for doesn't exist.</p>
+          <p className="text-gray-500 mb-4">The order you&apos;re looking for doesn&apos;t exist.</p>
           <Link
             href="/orders"
             className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700"
@@ -195,7 +198,7 @@ export default function OrderDetailsPage() {
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h2 className="text-lg font-semibold text-gray-900 mb-4">Order Status</h2>
               <div className="flex items-center gap-4 mb-6">
-                <span className={`px-3 py-1 rounded-full text-sm font-medium ${statusColors[order.status]}`}>
+                <span className={`px-3 py-1 rounded-full text-sm font-medium ${statusColors[order.status as OrderStatus]}`}>
                   {order.status}
                 </span>
                 {order.tracking && (
@@ -241,15 +244,17 @@ export default function OrderDetailsPage() {
               <div className="space-y-6">
                 {order.books.map((book, index) => (
                   <div key={index} className="flex gap-4">
-                    <img
+                    <Image
                       src={book.image}
                       alt={book.title}
+                      width={96}
+                      height={144}
                       className="w-24 h-36 object-cover rounded-lg"
                     />
                     <div className="flex-1">
                       <h3 className="font-medium text-gray-900">{book.title}</h3>
                       <p className="text-sm text-gray-500">by {book.author}</p>
-                      <div className="mt-2 flex items-center gap-4 text-sm text-gray-500">
+                      <div className="mt-1 flex items-center gap-4 text-sm text-gray-500">
                         <span>{book.format}</span>
                         <span>${book.price}</span>
                       </div>

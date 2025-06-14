@@ -2,15 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { 
-  Package, 
   Truck, 
-  CheckCircle2, 
-  Clock, 
-  ChevronRight,
   Search,
   Filter,
-  ArrowUpDown,
   Eye
 } from "lucide-react";
 
@@ -205,9 +201,11 @@ export default function OrdersPage() {
                 <div className="space-y-4">
                   {order.books.map((book, index) => (
                     <div key={index} className="flex gap-4">
-                      <img
+                      <Image
                         src={book.image}
                         alt={book.title}
+                        width={80}
+                        height={112}
                         className="w-20 h-28 object-cover rounded-lg"
                       />
                       <div className="flex-1">

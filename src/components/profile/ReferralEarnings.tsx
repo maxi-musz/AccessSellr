@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { DollarSign, Users, TrendingUp, ArrowUpRight, ArrowDownRight, Share2 } from "lucide-react";
+import { DollarSign, Users, TrendingUp, ArrowUpRight, Share2 } from "lucide-react";
 
 // Mock data - replace with actual data from your backend
 const referralData = {

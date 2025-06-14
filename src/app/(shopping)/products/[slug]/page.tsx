@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useParams } from "next/navigation";
+import Image from "next/image";
 import { 
   ArrowLeft, 
   Star, 
@@ -120,9 +121,11 @@ export default function ProductDetailPage() {
               {/* Book Images */}
               <div className="space-y-4">
                 <div className="aspect-[3/4] rounded-xl overflow-hidden bg-gray-100">
-                  <img
+                  <Image
                     src={product.images[selectedImage]}
                     alt={product.title}
+                    width={500}
+                    height={667}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -137,9 +140,11 @@ export default function ProductDetailPage() {
                           : 'border-transparent'
                       }`}
                     >
-                      <img
+                      <Image
                         src={image}
                         alt={`${product.title} - View ${index + 1}`}
+                        width={125}
+                        height={167}
                         className="w-full h-full object-cover"
                       />
                     </button>

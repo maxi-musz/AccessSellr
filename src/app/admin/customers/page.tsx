@@ -3,7 +3,6 @@
 import { useState } from "react";
 import {
   Search,
-  ChevronDown,
   X,
   User,
   Mail,
@@ -12,7 +11,6 @@ import {
   Calendar,
   Eye,
   MoreVertical,
-  Filter,
   ArrowUpDown,
   DollarSign,
   MapPin,
@@ -140,16 +138,16 @@ export default function CustomersPage() {
     }
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "Active":
-        return "bg-green-100 text-green-800";
-      case "Inactive":
-        return "bg-gray-100 text-gray-800";
-      default:
-        return "bg-gray-100 text-gray-800";
-    }
-  };
+  // const getStatusColor = (status: string) => {
+  //   switch (status) {
+  //     case "Active":
+  //       return "bg-green-100 text-green-800";
+  //     case "Inactive":
+  //       return "bg-gray-100 text-gray-800";
+  //     default:
+  //       return "bg-gray-100 text-gray-800";
+  //   }
+  // };
 
   return (
     <div className="space-y-6">

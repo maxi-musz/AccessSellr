@@ -5,8 +5,6 @@ import {
   Users,
   ShoppingCart,
   TrendingUp,
-  ArrowUpRight,
-  ArrowDownRight,
   Package,
   BarChart3
 } from "lucide-react";

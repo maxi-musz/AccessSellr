@@ -36,6 +36,14 @@ export default function ResetPasswordPage() {
   const token = searchParams.get("token");
   const email = searchParams.get("email");
 
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      password: "",
+      confirmPassword: "",
+    },
+  });
+
   if (!token || !email) {
     return (
       <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -58,14 +66,6 @@ export default function ResetPasswordPage() {
       </div>
     );
   }
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      password: "",
-      confirmPassword: "",
-    },
-  });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {

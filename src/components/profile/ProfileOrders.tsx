@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { Package, Truck, CheckCircle2, Clock, Eye, ArrowRight } from "lucide-react";
+import { Truck, Eye } from "lucide-react";
 import Link from "next/link";
 
 // Mock orders data - replace with actual data from your backend

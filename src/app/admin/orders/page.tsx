@@ -8,15 +8,12 @@ import {
   Package,
   Truck,
   CheckCircle2,
-  AlertCircle,
   Clock,
   Eye,
   Download,
   MoreVertical,
-  Filter,
   ArrowUpDown,
   Calendar,
-  DollarSign
 } from "lucide-react";
 import OrderDetailsModal from "@/components/modals/OrderDetailsModal";
 

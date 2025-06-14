@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, Plus, Loader2, Book, Image, Tag, Globe, BookOpen, Users, Hash, Building, Edit2, Trash2 } from 'lucide-react';
+import { X, Plus, Loader2, Book, Image, Tag, Globe, BookOpen, Hash, Edit2, Trash2 } from 'lucide-react';
 
 interface Book {
   name: string;

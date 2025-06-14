@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { 
   User,
   BookOpen,
@@ -46,10 +47,12 @@ export default function ProfilePage() {
           <div className="lg:col-span-1">
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <div className="flex flex-col items-center">
-                <img
+                <Image
                   src={userData.avatar}
-                  alt={userData.name}
-                  className="w-24 h-24 rounded-full object-cover mb-4"
+                  alt={`${userData.name}'s profile picture`}
+                  width={120}
+                  height={120}
+                  className="w-30 h-30 rounded-full object-cover mb-4"
                 />
                 <h2 className="text-lg font-semibold text-gray-900">{userData.name}</h2>
                 <p className="text-sm text-gray-500">Member since {userData.joinDate}</p>
