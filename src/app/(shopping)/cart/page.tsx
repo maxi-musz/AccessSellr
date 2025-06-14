@@ -16,6 +16,7 @@ import {
   Info,
   CheckCircle
 } from "lucide-react";
+import PageHeader from "@/components/ui/PageHeader";
 
 // Add interface for cart item
 interface CartItem {
@@ -121,23 +122,16 @@ export default function ProfessionalCartPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
+      <PageHeader title="Shopping Cart" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Enhanced Header */}
+        {/* Cart Summary */}
         <div className="mb-8">
-          <div className="flex items-center gap-4 mb-4">
-            <button className="p-2 hover:bg-white/50 rounded-lg transition-colors">
-              <ArrowLeft className="h-5 w-5 text-gray-600" />
-            </button>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Shopping Cart</h1>
-              <p className="text-gray-600 mt-1">
-                {items.length} {items.length === 1 ? 'item' : 'items'} in your cart
-              </p>
-            </div>
-          </div>
+          <p className="text-gray-600">
+            {items.length} {items.length === 1 ? 'item' : 'items'} in your cart
+          </p>
           
           {savings > 0 && (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-center gap-3">
+            <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-center gap-3 mt-4">
               <CheckCircle className="h-5 w-5 text-green-600" />
               <span className="text-green-800 font-medium">
                 You're saving ${savings.toFixed(2)} on this order!

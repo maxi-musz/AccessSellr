@@ -118,6 +118,10 @@ export default function Navbar() {
                         <User className="w-4 h-4" />
                         <span className="text-sm">Profile</span>
                       </Link>
+                      <Link href="/admin/dashboard" className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-50">
+                        <User className="w-4 h-4" />
+                        <span className="text-sm">Admin Panel</span>
+                      </Link>
                       <Link href="/orders" className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-50">
                         <Package className="w-4 h-4" />
                         <span className="text-sm">Orders</span>
@@ -199,6 +203,10 @@ export default function Navbar() {
                     <User className="w-5 h-5 text-indigo-600" />
                     <span className="text-sm font-medium">Profile</span>
                   </Link>
+                  <Link href="/admin/dashboard" className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                    <User className="w-5 h-5 text-indigo-600" />
+                    <span className="text-sm font-medium">Admin Panel</span>
+                  </Link>
                   <Link href="/orders" className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
                     <Package className="w-5 h-5 text-indigo-600" />
                     <span className="text-sm font-medium">Orders</span>
@@ -207,6 +215,7 @@ export default function Navbar() {
                     <Settings className="w-5 h-5 text-indigo-600" />
                     <span className="text-sm font-medium">Settings</span>
                   </Link>
+                  
                 </nav>
               </div>
 
