@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -19,7 +20,7 @@ export default function Hero() {
           </p>
           
           {/* Search Bar */}
-          <div className="relative max-w-2xl mx-auto mb-8">
+          {/* <div className="relative max-w-2xl mx-auto mb-8">
             <div className="relative">
               <input
                 type="search"
@@ -30,23 +31,27 @@ export default function Hero() {
                 <Search className="w-6 h-6 text-white" />
               </button>
             </div>
-          </div>
+          </div> */}
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg rounded-full px-8 font-medium"
-            >
-              Start Shopping
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="bg-white/10 hover:bg-white/20 text-white border-white/50 hover:border-white rounded-full px-8 font-medium"
-            >
-              Learn About Referrals
-            </Button>
+            <Link href="/products">
+              <Button 
+                size="lg" 
+                className="bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg rounded-full px-8 font-medium"
+              >
+                Start Shopping
+              </Button>
+            </Link>
+            <Link href="/about-referrals">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="bg-white/10 hover:bg-white/20 text-white border-white/50 hover:border-white rounded-full px-8 font-medium"
+              >
+                Learn About Referrals
+              </Button>
+            </Link>
           </div>
 
           {/* Stats */}

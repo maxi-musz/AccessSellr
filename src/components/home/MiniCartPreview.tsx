@@ -1,17 +1,25 @@
-// Optional: Only render if user is logged in (pseudo-logic)
+"use client";
+
+import { useRouter } from "next/navigation";
 import { ShoppingCart } from "lucide-react";
 
 export default function MiniCartPreview() {
+  const router = useRouter();
   // Placeholder: Replace with real cart/user logic
   const isLoggedIn = true;
   const cartItems = [
     { id: 1, title: "Book 1", price: 12.99, qty: 1 },
     { id: 2, title: "Book 2", price: 15.49, qty: 2 },
   ];
+
   if (!isLoggedIn) return null;
+
   return (
     <div className="relative group">
-      <button className="flex items-center gap-2 px-4 py-2 rounded hover:bg-indigo-50">
+      <button 
+        onClick={() => router.push("/cart")}
+        className="flex items-center gap-2 px-4 py-2 rounded hover:bg-indigo-50"
+      >
         <div className="relative">
           <ShoppingCart className="w-6 h-6 text-indigo-600" />
           <span className="absolute -top-2 -right-2 bg-indigo-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs">
@@ -35,7 +43,12 @@ export default function MiniCartPreview() {
             ))}
           </ul>
         )}
-        <button className="w-full bg-indigo-600 text-white py-2 rounded mt-2 hover:bg-indigo-700 transition">Go to Cart</button>
+        <button 
+          onClick={() => router.push("/cart")}
+          className="w-full bg-indigo-600 text-white py-2 rounded mt-2 hover:bg-indigo-700 transition"
+        >
+          Go to Cart
+        </button>
       </div>
     </div>
   );

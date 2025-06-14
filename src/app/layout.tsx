@@ -1,18 +1,24 @@
-import type { Metadata } from "next";
-import "./globals.css";
+'use client';
 
-export const metadata: Metadata = {
-  title: "BookSellr",
-  description: "Smart publishing e-commerce platform",
-};
+import { useState } from "react";
+import Footer from "@/components/home/Footer";
+import "./globals.css";
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="font-sans antialiased">
-        {children}
+      <body className="min-h-screen bg-white">
+        {/* Main Content */}
+        <main>
+          {children}
+        </main>
+
+        {/* Footer */}
+        <Footer />
       </body>
     </html>
   );
