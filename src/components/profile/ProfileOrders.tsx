@@ -1,4 +1,8 @@
-import { Package, Truck, CheckCircle2, Clock, Eye } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import { Package, Truck, CheckCircle2, Clock, Eye, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 // Mock orders data - replace with actual data from your backend
@@ -115,9 +119,11 @@ export default function ProfileOrders() {
             <div className="space-y-4">
               {order.books.map((book, index) => (
                 <div key={index} className="flex gap-4">
-                  <img
+                  <Image
                     src={book.image}
                     alt={book.title}
+                    width={200}
+                    height={280}
                     className="w-20 h-28 object-cover rounded-lg"
                   />
                   <div className="flex-1">

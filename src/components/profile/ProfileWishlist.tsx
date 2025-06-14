@@ -1,4 +1,8 @@
-import { Heart, Trash2 } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import { Trash2, ShoppingCart } from "lucide-react";
 
 // Mock wishlist data - replace with actual data from your backend
 const wishlistItems = [
@@ -36,10 +40,12 @@ export default function ProfileWishlist() {
         <div className="space-y-4">
           {wishlistItems.map((item) => (
             <div key={item.id} className="flex gap-4 p-4 border border-gray-200 rounded-lg">
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
-                className="w-20 h-28 object-cover rounded-lg"
+                width={200}
+                height={280}
+                className="w-full h-full object-cover"
               />
               <div className="flex-1">
                 <h4 className="font-medium text-gray-900">{item.title}</h4>

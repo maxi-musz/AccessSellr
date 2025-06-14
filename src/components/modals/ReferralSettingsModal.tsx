@@ -40,6 +40,7 @@ export default function ReferralSettingsModal({
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
           onClick={onClose}
+          aria-hidden="true"
         />
 
         {/* Modal */}
@@ -50,6 +51,7 @@ export default function ReferralSettingsModal({
             <button
               onClick={onClose}
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              aria-label="Close modal"
             >
               <X className="h-5 w-5 text-gray-500" />
             </button>
@@ -75,6 +77,7 @@ export default function ReferralSettingsModal({
                   })}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                   placeholder="Enter percentage"
+                  aria-label="Referral percentage"
                 />
                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">%</span>
               </div>
@@ -97,6 +100,7 @@ export default function ReferralSettingsModal({
                 })}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter minimum referrals"
+                aria-label="Minimum referrals"
               />
               <p className="text-sm text-gray-500">Minimum number of referrals required for rewards</p>
             </div>
@@ -119,6 +123,7 @@ export default function ReferralSettingsModal({
                   })}
                   className="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                   placeholder="Enter threshold amount"
+                  aria-label="Reward threshold"
                 />
               </div>
               <p className="text-sm text-gray-500">Minimum purchase amount required for referral reward</p>
@@ -140,6 +145,7 @@ export default function ReferralSettingsModal({
                 })}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter number of days"
+                aria-label="Expiration days"
               />
               <p className="text-sm text-gray-500">Number of days before referral link expires</p>
             </div>
