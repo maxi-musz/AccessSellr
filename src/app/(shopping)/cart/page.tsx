@@ -9,13 +9,13 @@ import {
   Minus, 
   Package, 
   Truck, 
-  CreditCard, 
   Shield,
   Heart,
   Star,
   Info,
   CheckCircle
 } from "lucide-react";
+import Image from "next/image";
 import PageHeader from "@/components/ui/PageHeader";
 
 // Add interface for cart item
@@ -134,7 +134,7 @@ export default function ProfessionalCartPage() {
             <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-center gap-3 mt-4">
               <CheckCircle className="h-5 w-5 text-green-600" />
               <span className="text-green-800 font-medium">
-                You're saving ${savings.toFixed(2)} on this order!
+                You&apos;re saving ${savings.toFixed(2)} on this order!
               </span>
             </div>
           )}
@@ -167,9 +167,11 @@ export default function ProfessionalCartPage() {
                         {/* Book Image */}
                         <div className="relative">
                           <div className="w-28 h-36 rounded-xl overflow-hidden bg-gray-100 shadow-sm">
-                            <img
+                            <Image
                               src={item.image}
                               alt={item.title}
+                              width={112}
+                              height={144}
                               className="w-full h-full object-cover"
                             />
                           </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -93,9 +93,11 @@ export default function OrderSuccessPage() {
                     {orderDetails.items.map((item) => (
                       <div key={item.id} className="flex gap-4">
                         <div className="w-16 h-20 rounded-lg overflow-hidden bg-gray-100">
-                          <img
+                          <Image
                             src={item.image}
                             alt={item.title}
+                            width={64}
+                            height={80}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -151,7 +153,7 @@ export default function OrderSuccessPage() {
           <Card>
             <CardContent className="p-6">
               <h2 className="text-lg font-medium text-gray-900 mb-6">
-                What's Next?
+                What&apos;s Next?
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -165,7 +167,7 @@ export default function OrderSuccessPage() {
                       Order Processing
                     </h3>
                     <p className="text-gray-600 mt-1">
-                      We're preparing your order for shipment. You'll receive an
+                      We&apos;re preparing your order for shipment. You&apos;ll receive an
                       email when your order ships.
                     </p>
                   </div>

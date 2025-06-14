@@ -14,11 +14,7 @@ import {
   Book,
   BookOpen,
   Download,
-  Share2,
-  ChevronDown,
-  Check,
-  Bookmark,
-  BookmarkCheck
+  Check
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";

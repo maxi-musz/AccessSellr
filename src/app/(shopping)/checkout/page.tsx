@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -278,9 +279,11 @@ export default function CheckoutPage() {
                         {cartItems.map((item) => (
                           <div key={item.id} className="flex gap-4">
                             <div className="w-16 h-20 rounded-lg overflow-hidden bg-gray-100">
-                              <img
+                              <Image
                                 src={item.image}
                                 alt={item.title}
+                                width={64}
+                                height={80}
                                 className="w-full h-full object-cover"
                               />
                             </div>

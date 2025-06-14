@@ -1,12 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { 
   ArrowLeft,
-  Package,
   Truck,
   CheckCircle2,
   Clock,

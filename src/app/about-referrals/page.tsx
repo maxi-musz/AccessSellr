@@ -27,7 +27,7 @@ export default function AboutReferralsPage() {
               How It Works
             </h2>
             <p className="text-gray-600 mb-4">
-              Our referral program is designed to reward both you and your friends for spreading the word about our amazing products. Here's how it works:
+              Our referral program is designed to reward both you and your friends for spreading the word about our amazing products. Here&apos;s how it works:
             </p>
             <ul className="list-disc pl-6 text-gray-600 space-y-2">
               <li>Share your unique referral link with friends and family</li>

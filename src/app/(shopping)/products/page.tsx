@@ -242,7 +242,6 @@ export default function ProfessionalProductsPage() {
   const [viewMode, setViewMode] = useState("grid");
   const [showFilters, setShowFilters] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedFilters, setSelectedFilters] = useState({});
   const [wishlist, setWishlist] = useState<Set<number>>(new Set());
   const [cart, setCart] = useState<Set<number>>(new Set());
 
