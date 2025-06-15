@@ -6,15 +6,62 @@ import { ArrowRight, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 import Image from "next/image";
 
-const newBooks = Array.from({ length: 6 }).map((_, i) => ({
-  id: i + 101,
-  title: `New Arrival ${i + 1}`,
-  author: `Author Name ${i + 1}`,
-  desc: "Latest release from top authors.",
-  price: (14.99 + i).toFixed(2),
-  image: `/book${(i % 4) + 1}.jpg`,
-  releaseDate: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
-}));
+const newBooks = [
+  {
+    id: 101,
+    title: "Digital Marketing Mastery",
+    author: "Marketing Experts",
+    desc: "Learn the art and science of digital marketing in the modern age.",
+    price: "26.99",
+    image: "/images/book-images/TBm-300x300.png",
+    releaseDate: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+  },
+  {
+    id: 102,
+    title: "Business Growth Strategies",
+    author: "Business Leaders",
+    desc: "Proven strategies for sustainable business growth and success.",
+    price: "21.99",
+    image: "/images/book-images/mockup-2.png",
+    releaseDate: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+  },
+  {
+    id: 103,
+    title: "E-commerce Success",
+    author: "Industry Experts",
+    desc: "The complete guide to building a successful online store.",
+    price: "23.99",
+    image: "/images/book-images/7733342_1580677080347book3d.png",
+    releaseDate: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+  },
+  {
+    id: 104,
+    title: "Profit First",
+    author: "Mike Michalowicz",
+    desc: "Transform your business from a cash-eating monster to a money-making machine.",
+    price: "24.99",
+    image: "/images/book-images/profit-first.png",
+    releaseDate: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+  },
+  {
+    id: 105,
+    title: "Launch",
+    author: "Jeff Walker",
+    desc: "The ultimate guide to launching your product or service online.",
+    price: "29.99",
+    image: "/images/book-images/Launch-Jeff-Walker-2.png",
+    releaseDate: new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+  },
+  {
+    id: 106,
+    title: "50 Shades of Growth",
+    author: "Sid Bharath",
+    desc: "A comprehensive guide to e-commerce growth strategies.",
+    price: "19.99",
+    image: "/images/book-images/Best-Ecommerce-Books-50-Shades-of-Growth-–-Sid-Bharath-and-D.png",
+    releaseDate: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+  }
+];
 
 export default function NewArrivals() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);

@@ -7,28 +7,28 @@ import Image from "next/image";
 
 const categories = [
   { 
-    name: "Fiction", 
-    image: "/cat-fiction.jpg",
-    count: "2.5k+ Books",
-    description: "Explore captivating stories and novels"
+    name: "Business", 
+    image: "/images/book-images/profit-first.png",
+    count: "500+ Books",
+    description: "Business strategy, entrepreneurship, and management"
   },
   { 
-    name: "Non-Fiction", 
-    image: "/cat-nonfiction.jpg",
-    count: "1.8k+ Books",
-    description: "Learn from expert authors"
+    name: "Marketing", 
+    image: "/images/book-images/TBm-300x300.png",
+    count: "300+ Books",
+    description: "Digital marketing, branding, and growth strategies"
   },
   { 
-    name: "Children", 
-    image: "/cat-children.jpg",
-    count: "1.2k+ Books",
-    description: "Fun and educational reads"
+    name: "E-commerce", 
+    image: "/images/book-images/ecommerce-book-cover.png",
+    count: "400+ Books",
+    description: "Online retail, store management, and sales"
   },
   { 
-    name: "Academics", 
-    image: "/cat-academics.jpg",
-    count: "3k+ Books",
-    description: "Textbooks and study materials"
+    name: "Technology", 
+    image: "/images/book-images/7733342_1580677080347book3d.png",
+    count: "600+ Books",
+    description: "Programming, digital tools, and tech trends"
   },
 ];
 
@@ -58,9 +58,9 @@ export default function Categories() {
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
               
-              <div className="absolute inset-0 p-3 sm:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 p-3 sm:p-6 flex flex-col justify-end">
                 <div className="text-white">
                   <h3 className="text-lg sm:text-2xl font-bold mb-1 sm:mb-2">{cat.name}</h3>
                   <p className="text-xs sm:text-sm text-gray-200 mb-2 sm:mb-3">{cat.description}</p>

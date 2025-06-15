@@ -17,42 +17,42 @@ export default function Home() {
       
       {/* Featured Section with Background */}
       <section className="bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
           <FeaturedBooks />
         </div>
       </section>
 
       {/* Referral Section with Contrast */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
           <ReferralHighlight />
         </div>
       </section>
 
       {/* New Arrivals with Pattern Background */}
       <section className="bg-[url('/pattern.svg')] bg-opacity-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
           <NewArrivals />
         </div>
       </section>
 
       {/* Categories with Gradient */}
       <section className="bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
           <Categories />
         </div>
       </section>
 
       {/* How It Works with Clean Background */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
           <HowItWorks />
         </div>
       </section>
 
       {/* Testimonials with Subtle Pattern */}
       <section className="bg-[url('/pattern.svg')] bg-opacity-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
           <Testimonials />
         </div>
       </section>
