@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { X, Plus, Loader2, Book, Image, Tag, Globe, BookOpen, Hash, Edit2, Trash2 } from 'lucide-react';
+import { X, Plus, Loader2, Book, Tag, Globe, BookOpen, Hash, Edit2, Trash2 } from 'lucide-react';
+import Image from 'next/image';
 
 interface Book {
   name: string;
@@ -315,7 +316,14 @@ export default function AddBookModal({
             {/* Media & Publisher Section */}
             <div className="space-y-6">
               <div className="flex items-center gap-2 text-gray-900">
-                <Image className="h-5 w-5" />
+                <div className="relative w-5 h-5">
+                  <Image 
+                    src="/images/icons/media.svg" 
+                    alt="Media icon"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <h3 className="font-medium">Media & Publisher</h3>
               </div>
               <div className="grid grid-cols-2 gap-6">

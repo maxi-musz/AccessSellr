@@ -1,12 +1,22 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Users, Percent, Clock } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden">
       {/* Background with Overlay */}
-      <div className="absolute inset-0 bg-[url('/images/book-images/mockup-2.png')] bg-cover bg-center" />
+      <div className="absolute inset-0">
+        <Image 
+          src="/images/book-images/mockup-2.png"
+          alt="Hero background"
+          fill
+          className="object-cover"
+          priority
+          quality={100}
+        />
+      </div>
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/95 via-indigo-900/90 to-blue-900/95" />
       
       {/* Content */}
@@ -92,14 +102,26 @@ export default function Hero() {
             <div className="hidden md:grid grid-cols-2 gap-4">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
                 <div className="aspect-square relative rounded-xl overflow-hidden mb-3">
-                  <img src="/images/book-images/profit-first.png" alt="Featured Book" className="object-cover w-full h-full" />
+                  <Image 
+                    src="/images/book-images/profit-first.png"
+                    alt="Bestseller Book"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
                 <h3 className="text-white font-semibold mb-1">Bestsellers</h3>
                 <p className="text-sm text-gray-300">Top rated books this month</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 mt-8">
                 <div className="aspect-square relative rounded-xl overflow-hidden mb-3">
-                  <img src="/images/book-images/ecommerce-book-cover.png" alt="Featured Book" className="object-cover w-full h-full" />
+                  <Image 
+                    src="/images/book-images/ecommerce-book-cover.png"
+                    alt="New Release Book"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
                 <h3 className="text-white font-semibold mb-1">New Releases</h3>
                 <p className="text-sm text-gray-300">Fresh content weekly</p>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from "react";
-import { Star, ShoppingCart, Heart, ChevronLeft, ChevronRight, Filter, TrendingUp, Award, BookOpen } from "lucide-react";
+import { Star, ShoppingCart, Heart, ChevronLeft, ChevronRight, TrendingUp, Award, BookOpen } from "lucide-react";
 
 interface Book {
   id: number;
