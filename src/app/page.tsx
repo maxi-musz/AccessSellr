@@ -22,13 +22,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Referral Section with Contrast */}
-      <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
-          <ReferralHighlight />
-        </div>
-      </section>
-
       {/* New Arrivals with Pattern Background */}
       <section className="bg-[url('/pattern.svg')] bg-opacity-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
@@ -42,6 +35,15 @@ export default function Home() {
           <Categories />
         </div>
       </section>
+
+      {/* Referral Section with Contrast */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+          <ReferralHighlight />
+        </div>
+      </section>
+
+      
 
       {/* How It Works with Clean Background */}
       <section className="bg-white">
