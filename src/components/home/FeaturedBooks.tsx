@@ -184,32 +184,32 @@ export default function FeaturedBooks() {
   };
 
   return (
-    <div className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+    <div className="py-8 sm:py-12 px-2 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto">
         
         {/* Enhanced Header */}
-        <div className={`mb-12 sm:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-sm font-medium mb-4">
-              <BookOpen className="w-4 h-4" />
+        <div className={`mb-8 sm:mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-xs sm:text-sm font-medium mb-3 sm:mb-4">
+              <BookOpen className="w-3 h-3 sm:w-4 sm:h-4" />
               <span>Curated Collection</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
               Featured Books
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
               Discover our handpicked selection of bestselling books across various genres
             </p>
           </div>
 
           {/* Enhanced Category Filter */}
-          <div className="flex justify-center">
-            <div className="flex items-center gap-2 p-1 bg-white rounded-full shadow-lg border border-gray-200">
+          <div className="flex justify-center overflow-x-auto pb-2">
+            <div className="flex items-center gap-1 sm:gap-2 p-1 bg-white rounded-full shadow-lg border border-gray-200">
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 ${
+                  className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium text-xs sm:text-sm transition-all duration-300 whitespace-nowrap ${
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg scale-105'
                       : 'text-gray-600 hover:text-indigo-600 hover:bg-gray-50'
@@ -227,34 +227,34 @@ export default function FeaturedBooks() {
           {/* Enhanced Navigation Buttons */}
           <button 
             onClick={() => scroll('left')}
-            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-20 w-12 h-12 rounded-full bg-white shadow-xl border border-gray-200 items-center justify-center text-gray-600 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-2xl transition-all duration-300 hover:scale-110"
+            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-xl border border-gray-200 items-center justify-center text-gray-600 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-2xl transition-all duration-300 hover:scale-110"
             aria-label="Scroll left"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
           <button 
             onClick={() => scroll('right')}
-            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-20 w-12 h-12 rounded-full bg-white shadow-xl border border-gray-200 items-center justify-center text-gray-600 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-2xl transition-all duration-300 hover:scale-110"
+            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-xl border border-gray-200 items-center justify-center text-gray-600 hover:text-indigo-600 hover:border-indigo-200 hover:shadow-2xl transition-all duration-300 hover:scale-110"
             aria-label="Scroll right"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Enhanced Books Grid */}
           <div 
             ref={scrollContainerRef}
-            className="flex overflow-x-auto pb-8 gap-4 px-4 sm:px-0 sm:gap-6 sm:snap-x sm:snap-mandatory scrollbar-hide scroll-smooth"
+            className="flex overflow-x-auto pb-6 gap-3 sm:gap-4 px-2 sm:px-0 sm:snap-x sm:snap-mandatory scrollbar-hide scroll-smooth"
           >
             {filteredBooks.map((book, index) => (
               <div 
                 key={book.id} 
-                className={`group relative flex-none w-[160px] sm:w-[220px] transition-all duration-700 ${
+                className={`group relative flex-none w-[140px] sm:w-[200px] transition-all duration-700 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Enhanced Card */}
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-indigo-200 hover:scale-105 snap-start">
+                <div className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-indigo-200 hover:scale-105 snap-start">
                   
                   {/* Book Image Container */}
                   <div className="aspect-[3/4] w-full bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
@@ -269,20 +269,20 @@ export default function FeaturedBooks() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
                     
                     {/* Badges */}
-                    <div className="absolute top-2 left-2 flex flex-col gap-1">
+                    <div className="absolute top-1.5 sm:top-2 left-1.5 sm:left-2 flex flex-col gap-1">
                       {book.badge && (
-                        <div className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium shadow-lg ${getBadgeColor(book.badge)}`}>
+                        <div className={`flex items-center gap-0.5 sm:gap-1 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium shadow-lg ${getBadgeColor(book.badge)}`}>
                           {getBadgeIcon(book.badge)}
-                          <span className="text-[10px] sm:text-xs">{book.badge}</span>
+                          <span className="text-[8px] sm:text-[10px]">{book.badge}</span>
                         </div>
                       )}
                       {book.discount && (
-                        <div className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold shadow-lg">
+                        <div className="bg-red-500 text-white px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-bold shadow-lg">
                           -{book.discount}%
                         </div>
                       )}
                       {book.isNew && (
-                        <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-medium shadow-lg">
+                        <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium shadow-lg">
                           New
                         </div>
                       )}
@@ -291,7 +291,7 @@ export default function FeaturedBooks() {
                     {/* Enhanced Favorite Button */}
                     <button 
                       onClick={() => toggleFavorite(book.id)}
-                      className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 shadow-lg hover:scale-110 ${
+                      className={`absolute top-1.5 sm:top-2 right-1.5 sm:right-2 p-1.5 sm:p-2 rounded-full transition-all duration-300 shadow-lg hover:scale-110 ${
                         favorites.has(book.id)
                           ? 'bg-red-500 text-white'
                           : 'bg-white/90 backdrop-blur-sm text-gray-600 hover:text-red-500'
@@ -301,44 +301,44 @@ export default function FeaturedBooks() {
                     </button>
 
                     {/* Quick Action Button - Visible on Hover */}
-                    <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                      <button className="w-full bg-white/95 backdrop-blur-sm text-gray-800 py-2 px-3 rounded-xl font-medium text-sm hover:bg-white transition-colors shadow-lg">
+                    <div className="absolute bottom-1.5 sm:bottom-2 left-1.5 sm:left-2 right-1.5 sm:right-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                      <button className="w-full bg-white/95 backdrop-blur-sm text-gray-800 py-1.5 sm:py-2 px-2 sm:px-3 rounded-lg sm:rounded-xl font-medium text-xs sm:text-sm hover:bg-white transition-colors shadow-lg">
                         Quick View
                       </button>
                     </div>
                   </div>
                   
                   {/* Enhanced Content */}
-                  <div className="p-3 sm:p-4">
+                  <div className="p-2 sm:p-4">
                     {/* Category & Rating */}
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-medium px-2 py-1 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700">
+                    <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+                      <span className="text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700">
                         {book.category}
                       </span>
-                      <div className="flex items-center gap-1 text-yellow-500">
-                        <Star className="w-3 h-3 fill-current" />
-                        <span className="text-xs font-medium">{book.rating}</span>
-                        <span className="text-xs text-gray-400">({book.reviews})</span>
+                      <div className="flex items-center gap-0.5 sm:gap-1 text-yellow-500">
+                        <Star className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current" />
+                        <span className="text-[10px] sm:text-xs font-medium">{book.rating}</span>
+                        <span className="text-[8px] sm:text-[10px] text-gray-400">({book.reviews})</span>
                       </div>
                     </div>
                     
                     {/* Book Info */}
-                    <h3 className="font-bold text-sm mb-1 line-clamp-2 text-gray-800 group-hover:text-indigo-600 transition-colors">
+                    <h3 className="font-bold text-xs sm:text-sm mb-0.5 sm:mb-1 line-clamp-2 text-gray-800 group-hover:text-indigo-600 transition-colors">
                       {book.title}
                     </h3>
-                    <p className="text-xs text-gray-500 mb-2">{book.author}</p>
-                    <p className="text-xs text-gray-600 line-clamp-2 mb-3 leading-relaxed">{book.desc}</p>
+                    <p className="text-[10px] sm:text-xs text-gray-500 mb-1 sm:mb-2">{book.author}</p>
+                    <p className="text-[10px] sm:text-xs text-gray-600 line-clamp-2 mb-2 sm:mb-3 leading-relaxed">{book.desc}</p>
                     
                     {/* Enhanced Price & Action */}
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <span className="text-lg font-bold text-indigo-600">${book.price}</span>
+                      <div className="flex items-center gap-1 sm:gap-2">
+                        <span className="text-sm sm:text-lg font-bold text-indigo-600">${book.price}</span>
                         {book.originalPrice && (
-                          <span className="text-xs text-gray-400 line-through">${book.originalPrice}</span>
+                          <span className="text-[10px] sm:text-xs text-gray-400 line-through">${book.originalPrice}</span>
                         )}
                       </div>
-                      <button className="group/btn bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-3 py-2 rounded-xl text-xs font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-1">
-                        <ShoppingCart className="w-3 h-3 group-hover/btn:scale-110 transition-transform" />
+                      <button className="group/btn bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-2 sm:px-3 py-1 sm:py-2 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-0.5 sm:gap-1">
+                        <ShoppingCart className="w-2.5 h-2.5 sm:w-3 sm:h-3 group-hover/btn:scale-110 transition-transform" />
                         <span>Add</span>
                       </button>
                     </div>
@@ -354,11 +354,11 @@ export default function FeaturedBooks() {
         </div>
 
         {/* Enhanced CTA Section */}
-        <div className="text-center mt-12">
-          <button className="group bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-            <span className="flex items-center gap-2">
+        <div className="text-center mt-8 sm:mt-12">
+          <button className="group bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+            <span className="flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base">
               View All Books
-              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
             </span>
           </button>
         </div>
