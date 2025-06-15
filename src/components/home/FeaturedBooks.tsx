@@ -119,7 +119,7 @@ const books: Book[] = [
   }
 ];
 
-const categories = ["All", "Education", "Tech", "Business", "Marketing", "E-commerce"] as const;
+const categories = ["All", "Education", "Tech", "Business", "Marketing"] as const;
 type Category = typeof categories[number];
 
 export default function FeaturedBooks() {
